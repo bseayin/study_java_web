@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 水平表单</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+   <div class="row">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-4"><h1>注册</h1></div>
+      <div class="col-xs-5"></div>
+          
+   </div>
+  
+</div>
+<form class="form-horizontal" role="form" action="RegisterServlet">
+	<div class="form-group">
+		<label for="firstname" class="col-sm-2 control-label">名字</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control"  name="username"
+				   placeholder="请输入名字">
+		</div>
+		<div class="col-sm-5"></div>
+	</div>
+	<div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">密码</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" name="userpwd"
+				   placeholder="请输入密码">
+		</div>
+		<div class="col-sm-5"></div>
+	</div>
+	
+	<div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">年龄</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" name="age"
+				   placeholder="请输入年龄">
+		</div>
+		<div class="col-sm-5"></div>
+	</div>
+	
+	<div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">性别</label>
+		<div class="col-sm-5">
+		
+		<label class="radio-inline">
+        <input type="radio" name="sex"  value="男" > 男
+   	    </label>
+   	    
+   	    <label class="radio-inline">
+        <input type="radio" name="sex"   value="女"> 女
+   		 </label>
+			
+		</div>
+		<div class="col-sm-5"></div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-primary">注册</button>
+			<a href="login.html" class="btn btn-primary" role="button">登录</a>
+		</div>
+	</div>
+</form>
+
+</body>
+</html>
