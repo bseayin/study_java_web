@@ -1,26 +1,29 @@
 package com.xsz.servlet;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.xsz.jdbc.JDBCDemo3;
-import com.xsz.jdbc.Student;
+import com.alibaba.fastjson.JSONObject;
+import com.xsz.jdbc.User;
+import com.xsz.jdbc.UserDao;
 
 /**
- * Servlet implementation class StudentServlet2
+ * Servlet implementation class GetAllUserServlet
  */
-@WebServlet("/StudentServlet2")
-public class StudentServlet2 extends HttpServlet {
+@WebServlet("/GetAllUserServlet")
+public class GetAllUserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public StudentServlet2() {
+    public GetAllUserServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,16 +33,17 @@ public class StudentServlet2 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String sid=request.getParameter("sid");
-		String uname=request.getParameter("ssssname");
-		JDBCDemo3 jdbc=new JDBCDemo3();
-		 Student student=new Student();
-	        student.setName(uname);
-	        student.setBirth("1999-03-03");
-	        student.setId(sid);
-	        student.setSex("男");
-	        jdbc.insert(student);
-		response.getWriter().append("add student"+uname);
+		//解决中文乱码问题
+				response.setCharacterEncoding("utf-8");
+				response.setContentType("text/html;charset=utf-8");
+				//获取前端传入值
+				String username=request.getParameter("username");
+				String userpwd=request.getParameter("userpwd");
+				//验证前端输入的用户名和密码是否存在数据库
+				 UserDao jdbc=new UserDao();
+		        List<User> list=jdbc.getAllUser();
+		        String rs=JSONObject.toJSONString(list);
+		        response.getWriter().append(rs);
 	}
 
 	/**

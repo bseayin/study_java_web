@@ -1,5 +1,7 @@
 package com.xsz.jdbc;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDao {
     public static void main(String[] args) {
@@ -45,6 +47,46 @@ public User getUser(String name,String userpwd){
         e.printStackTrace();
     }
 	return u;
+}
+
+
+//获取所有的用户
+//java 集合： 数组，List,Map
+public List<User> getAllUser(){
+	List<User> list=new ArrayList();
+	try {
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      //java10是数据库的名字
+      String url="jdbc:mysql://localhost:3306/java12i?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+      //登录数据库用户名
+      String username="root";
+      //登录数据库密码
+      String pwd="XSZ202006a";
+      Connection conn = DriverManager.getConnection(url,username,pwd);
+      String sql="select * from user ";
+      PreparedStatement st=conn.prepareStatement(sql);
+     
+     
+      ResultSet rs=st.executeQuery();
+      while(rs.next()){
+    	 User u=new User();
+      	u.setAge(rs.getInt("age"));
+      	u.setName(rs.getString("name"));
+      	u.setPwd(rs.getString("pwd"));
+      	u.setSex(rs.getString("sex"));
+      	list.add(u);
+      }
+      
+      st.close();
+      conn.close();
+  } catch (ClassNotFoundException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+  } catch (SQLException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+  }
+	return list;
 }
     
     //增
