@@ -51,8 +51,13 @@ public class LoginServlet2 extends HttpServlet {
 		        	response.getWriter().append("登录失败");
 		        }else{
 //		        	response.getWriter().append("欢迎"+u1.getName()+"登录成功！");
-		        	//如果登录成功，就跳转到新的html页面
-		        	response.sendRedirect("userinfo.html");
+		        	//如果登录成功，不同角色，跳转到不同的页面
+		        	if("管理员".equals(type)){
+		        		response.sendRedirect("usertable2.html");
+		        	}else{
+		        		response.sendRedirect("userinfo.html");
+		        	}
+		        	
 		        }
 	}
 

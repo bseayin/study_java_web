@@ -77,14 +77,7 @@ public User getUser2(String name,String userpwd){
 public List<User> getAllUser(){
 	List<User> list=new ArrayList();
 	try {
-      Class.forName("com.mysql.cj.jdbc.Driver");
-      //java10是数据库的名字
-      String url="jdbc:mysql://localhost:3306/java12i?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-      //登录数据库用户名
-      String username="root";
-      //登录数据库密码
-      String pwd="XSZ202006a";
-      Connection conn = DriverManager.getConnection(url,username,pwd);
+	 Connection conn = DBConnection.getConn();
       String sql="select * from user ";
       PreparedStatement st=conn.prepareStatement(sql);
      
@@ -101,9 +94,7 @@ public List<User> getAllUser(){
       
       st.close();
       conn.close();
-  } catch (ClassNotFoundException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
+  
   } catch (SQLException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
