@@ -8,9 +8,17 @@
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="container">
+   <div class="row">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-4"><h1>用户信息列表</h1></div>
+       <div class="col-xs-4"></div>
+      <div class="col-xs-1"><a href="login.html" class="btn btn-default" role="button">登录</a></div>
+   </div>
+</div>
 
 <div class="table-responsive">
-	<table class="table">
+	<table class="table table-bordered table-striped">
 		<thead>
 			<tr>
 				<th>姓名</th>
@@ -18,32 +26,36 @@
 				<th>性别</th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody id="ubody">
 			<tr>
 				<td>产品1</td>
 				<td>23/11/2013</td>
 				<td>待发货</td>
 			</tr>
-			<tr>
-				<td>产品2</td>
-				<td>10/11/2013</td>
-				<td>发货中</td>
-			</tr>
-			<tr>
-				<td>产品3</td>
-				<td>20/10/2013</td>
-				<td>待确认</td>
-			</tr>
-			<tr>
-				<td>产品4</td>
-				<td>20/10/2013</td>
-				<td>已退货</td>
-			</tr>
+			
 		</tbody>
 </table>
 </div>  	
 
 </body>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	  // 在这里写你的代码...
+	$.getJSON("/servletdemo/GetAllUserServlet", function(data){
+		console.log(data);
+		 $("#ubody").empty();
+       // alert("Data Loaded: " + data);
+       for(var i=0;i<data.length;i++){
+    	   $("#ubody").append("<tr><td>"+data[i].name+"</td>"+"<td>"+data[i].age+"</td>"+"<td>"+data[i].sex+"</td></tr>");
+       }
+		
+	});
+	  
+	});
+
+</script>
 
 
 </html>
