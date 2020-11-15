@@ -5,6 +5,21 @@ public class User {
 	private String pwd;
 	private int age;
 	private String sex;
+	private String role;
+	private String mobile;
+	
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
 	public String getName() {
 		return name;
 	}

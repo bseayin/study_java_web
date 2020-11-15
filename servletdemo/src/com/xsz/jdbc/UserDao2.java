@@ -117,12 +117,14 @@ public List<User> getAllUser(){
         try {
             
             Connection conn = DBConnection.getConn();
-            String sql="insert into user (age,name,pwd,sex) values (?,?,?,?)";
+            String sql="insert into user (age,name,pwd,sex,role,mobile) values (?,?,?,?,?,?)";
             PreparedStatement st=conn.prepareStatement(sql);
             st.setInt(1,s.getAge());
             st.setString(2,s.getName());
             st.setString(3,s.getPwd());
             st.setString(4,s.getSex());
+            st.setString(5, s.getRole());
+            st.setString(6, s.getMobile());
             int rs=st.executeUpdate();
             if(rs>0){
             	f=true;
