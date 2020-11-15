@@ -16,7 +16,7 @@ public class UserDao2 {
 public User getUser(String name,String userpwd){
 		User u=new User();
         Connection conn = DBConnection.getConn();
-        String sql="select * from user where name=? and pwd=?";
+        String sql="select * from user where name=? and pwd=? and role='普通用户'";
         ResultSet rs;
 		try {
 			PreparedStatement st=conn.prepareStatement(sql);
