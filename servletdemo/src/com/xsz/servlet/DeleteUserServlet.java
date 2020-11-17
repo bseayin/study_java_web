@@ -34,7 +34,7 @@ public class DeleteUserServlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		//获取前端传入值
 		String username=request.getParameter("username");
-		
+		System.out.println("前端输入的name="+username);
 		//验证前端输入的用户名和密码是否存在数据库
 		 UserDao2 jdbc=new UserDao2();
 		
