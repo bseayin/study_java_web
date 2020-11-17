@@ -110,6 +110,7 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
+	
 	  // 在这里写你的代码...
 	$.getJSON("/servletdemo/GetAllUserServlet2", function(data){
 		console.log(data);
@@ -123,8 +124,20 @@ $(document).ready(function(){
        //id的属性值是不能重复的
        //jquery选择器的意思就是去找到页面上的各种元素
        //jquery属性选择器：$("元素类型[属性名字='属性的值']")
+       /**
+                      点击事件：意思就是当被选中的元素，被点击的时候，会执行的事件
+        click(function(){点击以后，要执行的代码})
+                         弹出提示框： alert("提示的内容")
+        $(this).attr("属性的名字")) 返回被点击元素的属性的值
+       
+       **/
        $("button[name='deletebtn']").click( function () {
-    	   alert("被点击了"+$(this).attr("id"));
+    	   //alert("被点击了"+$(this).attr("id"));
+    	   $.get("/servletdemo/DeleteUserServlet", { username: $(this).attr("id") },
+    	   function(data){
+    		    alert("删除成功！");
+    		   	window.location.href="/servletdemo/usertable2.html"  
+    		});
        });
        
 		

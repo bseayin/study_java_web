@@ -135,31 +135,20 @@ public List<User> getAllUser(){
 
     }
 
-    //删
-    public boolean delete(String sid){
+    //根据姓名删除用户
+    public boolean delete(String name){
         boolean f=false;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //java10是数据库的名字
-            String url="jdbc:mysql://localhost:3306/java12i?useSSL=false&serverTimezone=UTC";
-            //登录数据库用户名
-            String username="root";
-            //登录数据库密码
-            String pwd="XSZ202006a";
-            Connection conn = DriverManager.getConnection(url,username,pwd);
-//            String sql="delete from student where s_id='"+sid+"'";
-            String sql="delete from student where s_id=?";
+        	Connection conn = DBConnection.getConn();
+            String sql="delete from user where name=?";
             PreparedStatement st=conn.prepareStatement(sql);
-            st.setString(1,sid);
+            st.setString(1,name);
             int rs=st.executeUpdate();
             if(rs>0){
                 f=true;
             }
             st.close();
             conn.close();
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
