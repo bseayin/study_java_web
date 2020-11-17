@@ -89,6 +89,7 @@ public List<User> getAllUser(){
       	u.setName(rs.getString("name"));
       	u.setPwd(rs.getString("pwd"));
       	u.setSex(rs.getString("sex"));
+      	u.setMobile(rs.getString("mobile"));
       	list.add(u);
       }
       
