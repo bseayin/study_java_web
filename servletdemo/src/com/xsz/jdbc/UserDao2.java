@@ -42,6 +42,36 @@ public User getUser(String name,String userpwd){
 }
 
 
+
+//根据姓名查询用户
+public User getUserByName(String name){
+		User u=new User();
+      Connection conn = DBConnection.getConn();
+      String sql="select * from user where name=? ";
+      ResultSet rs;
+		try {
+			PreparedStatement st=conn.prepareStatement(sql);
+	        st.setString(1,name);
+			rs = st.executeQuery();
+			 while(rs.next()){
+		        	u.setAge(rs.getInt("age"));
+		        	u.setName(rs.getString("name"));
+		        	u.setPwd(rs.getString("pwd"));
+		        	u.setSex(rs.getString("sex"));
+		        	u.setMobile(rs.getString("mobile"));
+		       }
+		        
+	        st.close();
+	        conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+     
+  
+	return u;
+}
+
 //管理员登录
 public User getUser2(String name,String userpwd){
 		User u=new User();
@@ -135,6 +165,37 @@ public List<User> getAllUser(){
 
     }
 
+    
+    
+  //根据姓名修改用户
+    public boolean updateByName(User s){
+        boolean f=false;
+        try {
+            
+            Connection conn = DBConnection.getConn();
+            String sql="update user set age=?,mobile=?,name=? where name=?";
+            PreparedStatement st=conn.prepareStatement(sql);
+            st.setInt(1,s.getAge());
+            st.setString(4,s.getName());
+            st.setString(3,s.getName());
+            st.setString(2, s.getMobile());
+            int rs=st.executeUpdate();
+            if(rs>0){
+            	f=true;
+            }
+            st.close();
+            conn.close();
+       
+          
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return f;
+
+
+    }
     //根据姓名删除用户
     public boolean delete(String name){
         boolean f=false;
