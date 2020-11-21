@@ -7,21 +7,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.xsz.jdbc.Resource;
+import com.xsz.jdbc.ResourceDao;
 import com.xsz.jdbc.User;
-import com.xsz.jdbc.UserDao;
 import com.xsz.jdbc.UserDao2;
 
 /**
- * Servlet implementation class LoginServlet2
+ * Servlet implementation class AddUserServlet
  */
-@WebServlet("/LoginServlet2")
-public class LoginServlet2 extends HttpServlet {
+@WebServlet("/AddResourceServlet")
+public class AddResourceServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginServlet2() {
+    public AddResourceServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,32 +32,29 @@ public class LoginServlet2 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//解决中文乱码问题
+		// TODO Auto-generated method stub
+				//解决中文乱码问题
 				response.setCharacterEncoding("utf-8");
 				response.setContentType("text/html;charset=utf-8");
 				//获取前端传入值
-				String username=request.getParameter("username");
-				String userpwd=request.getParameter("userpwd");
 				String type=request.getParameter("type");
-				 UserDao2 jdbc=new UserDao2();
-				 User u1=null;
-				if("管理员".equals(type)){
-					u1=jdbc.getUser2(username, userpwd);
-				}else{
-					u1=jdbc.getUser(username, userpwd);
-				}
-		       
-		        System.out.println("欢迎"+u1.getName()+"登录成功！");
-		        if(u1.getName()==null){
-		        	response.getWriter().append("登录失败");
+				String content=request.getParameter("content");
+				
+				//验证前端输入的用户名和密码是否存在数据库
+				 ResourceDao jdbc=new ResourceDao();
+				 Resource res=new Resource();
+				 res.setContent(content);
+				 res.setType(type);
+				
+		        boolean f=jdbc.insert(res);
+
+		        if(f){
+		        	
+		        	response.sendRedirect("resourcetable.html");
 		        }else{
-//		        	response.getWriter().append("欢迎"+u1.getName()+"登录成功！");
-		        	//如果登录成功，不同角色，跳转到不同的页面
-		        	if("管理员".equals(type)){
-		        		response.sendRedirect("aindex.html");
-		        	}else{
-		        		response.sendRedirect("resourcetable2.html");
-		        	}
+//			        	response.getWriter().append("欢迎"+u1.getName()+"登录成功！");
+		        	
+		        	response.getWriter().append("添加失败");
 		        	
 		        }
 	}

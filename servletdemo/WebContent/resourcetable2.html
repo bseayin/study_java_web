@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>资料管理</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+   <div class="row">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-4"><h1>资料列表</h1></div>
+       <div class="col-xs-4"></div>
+      <div class="col-xs-1"><a href="login2.html" class="btn btn-default" role="button">登录</a></div>
+   </div>
+</div>
+<div class="table-responsive">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th class="col-xs-2">序号</th>
+				<th class="col-xs-3">类型</th>
+				<th class="col-xs-7">内容</th>
+				
+			</tr>
+		</thead>
+		<tbody id="ubody">
+			
+			
+		</tbody>
+</table>
+</div>  	
+
+
+
+
+<!-- 模态框（Modal） 修改弹出框开始-->
+<div class="modal fade" id="myModalupdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">修改</h4>
+            </div>
+            <div class="modal-body">
+            <form class="form-horizontal" role="form" action="UpdateResourceServlet">
+            
+            <div class="form-group">
+			<label for="firstname" class="col-sm-2 control-label">序号</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control"  name="id" id="rid" readonly>
+			</div>
+			<div class="col-sm-5"></div>
+		</div>
+		
+		<div class="form-group">
+			<label for="firstname" class="col-sm-2 control-label">类型</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control"  name="type" id="updatetype"
+					   placeholder="请输入类型">
+			</div>
+			<div class="col-sm-5"></div>
+		</div>
+	
+	<div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">内容</label>
+		<div class="col-sm-5">
+			<textarea class="form-control" rows="8" name="content" id="updatecontent"></textarea>
+		</div>
+		<div class="col-sm-5"></div>
+	</div>
+	
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="submit" class="btn btn-primary">提交更改</button>
+            </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 模态框（Modal） 修改弹出框结束-->
+</body>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+	  // 在这里写你的代码...
+	$.getJSON("/servletdemo/GetAllResourceServlet", function(data){
+		console.log(data);
+		 $("#ubody").empty();
+       // alert("Data Loaded: " + data);
+       for(var i=0;i<data.length;i++){
+    	   $("#ubody").append("<tr><td>"+data[i].id+"</td>"+"<td>"
+    			   +data[i].type+"</td>"+"<td>"+data[i].content+"</td></tr>");
+       }
+       
+       // name属性的值是可以重复的
+       //id的属性值是不能重复的
+       //jquery选择器的意思就是去找到页面上的各种元素
+       //jquery属性选择器：$("元素类型[属性名字='属性的值']")
+       /**
+                      点击事件：意思就是当被选中的元素，被点击的时候，会执行的事件
+        click(function(){点击以后，要执行的代码})
+                         弹出提示框： alert("提示的内容")
+        $(this).attr("属性的名字")) 返回被点击元素的属性的值
+       
+       **/
+      
+	  
+	  
+       
+		
+	});
+	  
+	});
+
+</script>
+
+
+</html>
