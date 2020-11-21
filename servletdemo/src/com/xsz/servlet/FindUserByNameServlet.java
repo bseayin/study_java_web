@@ -34,14 +34,13 @@ public class FindUserByNameServlet extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		//获取前端传入值
-		String username=request.getParameter("username");
-		// substring(开始下标)  substring(1)意思是截取 从下标是1的开始到末尾的字符串
-		System.out.println("前端传入： "+username);
-		username=username.substring(1);
-		System.out.println("处理以后： "+username);
+		String id=request.getParameter("id");
+		id=id.substring(1);
+		//String 转int
+		int id2=Integer.parseInt(id);
 		 UserDao2 jdbc=new UserDao2();
 		 User u1=null;
-		 u1=jdbc.getUserByName(username);
+		 u1=jdbc.getUserById(id2);
 		 String rs=JSONObject.toJSONString(u1);
 	     response.getWriter().append(rs);
         	

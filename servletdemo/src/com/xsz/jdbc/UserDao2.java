@@ -44,14 +44,14 @@ public User getUser(String name,String userpwd){
 
 
 //根据姓名查询用户
-public User getUserByName(String name){
+public User getUserById(int id){
 		User u=new User();
       Connection conn = DBConnection.getConn();
-      String sql="select * from user where name=? ";
+      String sql="select * from user where id=? ";
       ResultSet rs;
 		try {
 			PreparedStatement st=conn.prepareStatement(sql);
-	        st.setString(1,name);
+	        st.setInt(1,id);
 			rs = st.executeQuery();
 			 while(rs.next()){
 		        	u.setAge(rs.getInt("age"));
@@ -59,6 +59,8 @@ public User getUserByName(String name){
 		        	u.setPwd(rs.getString("pwd"));
 		        	u.setSex(rs.getString("sex"));
 		        	u.setMobile(rs.getString("mobile"));
+		        	u.setId(rs.getInt("id"));
+		        	
 		       }
 		        
 	        st.close();
@@ -120,6 +122,7 @@ public List<User> getAllUser(){
       	u.setPwd(rs.getString("pwd"));
       	u.setSex(rs.getString("sex"));
       	u.setMobile(rs.getString("mobile"));
+      	u.setId(rs.getInt("id"));
       	list.add(u);
       }
       
@@ -168,15 +171,15 @@ public List<User> getAllUser(){
     
     
   //根据姓名修改用户
-    public boolean updateByName(User s){
+    public boolean updateById(User s){
         boolean f=false;
         try {
             
             Connection conn = DBConnection.getConn();
-            String sql="update user set age=?,mobile=?,name=? where name=?";
+            String sql="update user set age=?,mobile=?,name=? where id=?";
             PreparedStatement st=conn.prepareStatement(sql);
             st.setInt(1,s.getAge());
-            st.setString(4,s.getName());
+            st.setInt(4,s.getId());
             st.setString(3,s.getName());
             st.setString(2, s.getMobile());
             int rs=st.executeUpdate();
@@ -197,13 +200,13 @@ public List<User> getAllUser(){
 
     }
     //根据姓名删除用户
-    public boolean delete(String name){
+    public boolean delete(int id){
         boolean f=false;
         try {
         	Connection conn = DBConnection.getConn();
-            String sql="delete from user where name=?";
+            String sql="delete from user where id=?";
             PreparedStatement st=conn.prepareStatement(sql);
-            st.setString(1,name);
+            st.setInt(1,id);
             int rs=st.executeUpdate();
             if(rs>0){
                 f=true;
@@ -221,41 +224,6 @@ public List<User> getAllUser(){
     }
 
 
-    //修改
-    public boolean update(String name,String sid ){
-        boolean f=false;
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //java10是数据库的名字
-            String url="jdbc:mysql://localhost:3306/java12i?useSSL=false&serverTimezone=UTC";
-            //登录数据库用户名
-            String username="root";
-            //登录数据库密码
-            String pwd="XSZ202006a";
-            Connection conn = DriverManager.getConnection(url,username,pwd);
-
-            String sql="update  student set s_name=? where s_id=?";
-            PreparedStatement st=conn.prepareStatement(sql);
-            st.setString(2,sid);
-            st.setString(1,name);
-            int rs=st.executeUpdate();
-            if(rs>0){
-                f=true;
-            }
-            st.close();
-            conn.close();
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        return f;
-
-
-    }
 
 
 }

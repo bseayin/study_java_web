@@ -136,6 +136,17 @@
             </div>
             <div class="modal-body">
             <form class="form-horizontal" role="form" action="UpdateUserServlet">
+            
+            <div class="form-group">
+		<label for="firstname" class="col-sm-2 control-label">序号</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control"  name="id" id="updateid"
+				   readonly>
+		</div>
+		<div class="col-sm-5"></div>
+	</div>
+	
+	
 	<div class="form-group">
 		<label for="firstname" class="col-sm-2 control-label">名字</label>
 		<div class="col-sm-5">
@@ -186,7 +197,7 @@ $(document).ready(function(){
 		 $("#ubody").empty();
        // alert("Data Loaded: " + data);
        for(var i=0;i<data.length;i++){
-    	   $("#ubody").append("<tr><td>"+data[i].name+"</td>"+"<td>"+data[i].age+"</td>"+"<td>"+data[i].sex+"</td>"+"<td>"+data[i].mobile+"</td>"+"<td>"+"<button type='button' class='btn btn-danger' name='deletebtn' id='"+data[i].name+"'>删除</button><button class='btn btn-primary btn' data-toggle='modal' data-target='#myModalupdate'  name='btnupdateuser' id='u"+data[i].name+"'>修改</button>"+"</td></tr>");
+    	   $("#ubody").append("<tr><td>"+data[i].name+"</td>"+"<td>"+data[i].age+"</td>"+"<td>"+data[i].sex+"</td>"+"<td>"+data[i].mobile+"</td>"+"<td>"+"<button type='button' class='btn btn-danger' name='deletebtn' id='"+data[i].id+"'>删除</button><button class='btn btn-primary btn' data-toggle='modal' data-target='#myModalupdate'  name='btnupdateuser' id='u"+data[i].id+"'>修改</button>"+"</td></tr>");
        }
        
        // name属性的值是可以重复的
@@ -202,7 +213,7 @@ $(document).ready(function(){
        **/
        $("button[name='deletebtn']").click( function () {
     	   //alert("被点击了"+$(this).attr("id"));
-    	   $.get("/servletdemo/DeleteUserServlet", { username: $(this).attr("id") },
+    	   $.get("/servletdemo/DeleteUserServlet", { id: $(this).attr("id") },
     	   function(data){
     		    alert("删除成功！");
     		   	window.location.href="/servletdemo/usertable2.html"  
@@ -212,12 +223,13 @@ $(document).ready(function(){
 	  
        $("button[name='btnupdateuser']").click( function () {
     	   //alert("被点击了"+$(this).attr("id"));
-    	   $.getJSON("/servletdemo/FindUserByNameServlet", { username: $(this).attr("id") },
+    	   $.getJSON("/servletdemo/FindUserByNameServlet", { id: $(this).attr("id") },
     	   function(data){
     		  
     		    $("#updatename").val(data.name);
     		    $("#updataage").val(data.age);
     		    $("#updatamobile").val(data.mobile);
+    		    $("#updateid").val(data.id);
     		    
     		    
     		});

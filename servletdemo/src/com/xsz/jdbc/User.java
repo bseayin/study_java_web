@@ -7,7 +7,16 @@ public class User {
 	private String sex;
 	private String role;
 	private String mobile;
+	private int id;
 	
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getRole() {
 		return role;
 	}

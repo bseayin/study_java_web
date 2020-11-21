@@ -38,7 +38,10 @@ public class UpdateUserServlet extends HttpServlet {
 		String age=request.getParameter("age");
 		String sex=request.getParameter("sex");
 		String mobile=request.getParameter("mobile");
+		String id=request.getParameter("id");
 		
+		//String 转int
+		int id2=Integer.parseInt(id);
 		//验证前端输入的用户名和密码是否存在数据库
 		 UserDao2 jdbc=new UserDao2();
 		 User user=new User();
@@ -47,11 +50,12 @@ public class UpdateUserServlet extends HttpServlet {
 		 user.setSex(sex);
 		 user.setMobile(mobile);
 		 user.setRole("普通用户");
+		 user.setId(id2);
 		 //String 转int 类型
 		int age2= Integer.parseInt(age);
 		user.setAge(age2);
 		
-        boolean f=jdbc.updateByName(user);
+        boolean f=jdbc.updateById(user);
 
         if(f){
         	
