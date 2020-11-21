@@ -59,7 +59,7 @@ public class UpdateUserServlet extends HttpServlet {
 
         if(f){
         	
-        	response.sendRedirect("usertable2.html");
+        	response.sendRedirect("aindex2.html");
         }else{
 //	        	response.getWriter().append("欢迎"+u1.getName()+"登录成功！");
         	

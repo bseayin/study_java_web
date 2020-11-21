@@ -52,7 +52,7 @@ public class UpdateResourceServlet extends HttpServlet {
 
         if(f){
         	
-        	response.sendRedirect("resourcetable.html");
+        	response.sendRedirect("aindex.html");
         }else{
 //	        	response.getWriter().append("欢迎"+u1.getName()+"登录成功！");
         	
