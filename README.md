@@ -31,6 +31,47 @@ https://blog.csdn.net/h356363/article/details/98381244
 ##### 常用注解
 https://blog.csdn.net/h356363/article/details/94054756
 
+###  SpringBoot 集成 JPA
+
+
+#### 参考博客
+
+SpringBoot2 学习3 集成JPA
+https://blog.csdn.net/h356363/article/details/98523963
+
+SpringBoot2 学习4 JPA 查询
+
+https://blog.csdn.net/h356363/article/details/98786017
+
+#### 环境搭建
+1. 在pom添加包
+ <!--  添加JPA的支持 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+2.  配置文件中设置相关属性
+ 
+spring.datasource.url = jdbc:mysql://localhost:3306/java12i?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+spring.datasource.username = root
+spring.datasource.password = XSZ202006a
+spring.datasource.driverClassName = com.mysql.jdbc.Driver
+spring.jpa.database = MYSQL
+spring.jpa.show-sql = true
+spring.jpa.hibernate.ddl-auto = update
+
+#### 注解
+
+- @Entity 表示是一个实体类，一个实体类对应一个数据库表
+- Spring data JPA 采用hibernate实现，通过entity可以反向生成数据表
+
+
+
+
+
+
+
+
 
 
 
