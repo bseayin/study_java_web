@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/springbootJPA/springbootJPA.iml" filepath="$PROJECT_DIR$/springbootJPA/springbootJPA.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootbasic/springbootbasic.iml" filepath="$PROJECT_DIR$/springbootbasic/springbootbasic.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/study_java_web.iml" filepath="$PROJECT_DIR$/.idea/study_java_web.iml" />
     </modules>
