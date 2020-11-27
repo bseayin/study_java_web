@@ -1,11 +1,15 @@
 # study_java_web
 ## 介绍
 ### Java基础学习
+#### 源码
 https://gitee.com/bseaworkspace/study_java_web/tree/master/corejava-demo
 
 ###  Servlet学习--实战项目 学生管理&资料管理
+#### 源码
 https://gitee.com/bseaworkspace/study_java_web/tree/master/servletdemo
 ###  SpringBoot 入门
+#### 源码
+https://gitee.com/bseaworkspace/study_java_web/tree/master/springbootbasic
 #### 环境搭建
 1. 配置pom文件
 2. 创建启动类，启动类上的注解是 @SpringBootApplication
@@ -32,8 +36,9 @@ https://blog.csdn.net/h356363/article/details/98381244
 https://blog.csdn.net/h356363/article/details/94054756
 
 ###  SpringBoot 集成 JPA
+#### 源码
 
-
+https://gitee.com/bseaworkspace/study_java_web/tree/master/springbootJPA
 #### 参考博客
 
 SpringBoot2 学习3 集成JPA
