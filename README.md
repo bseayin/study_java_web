@@ -70,6 +70,10 @@ spring.jpa.hibernate.ddl-auto = update
 - @Entity 表示是一个实体类，一个实体类对应一个数据库表
 - Spring data JPA 采用hibernate实现，通过entity可以反向生成数据表
 
+## 更多学习资料 请关注微信公众号
+
+![个人学习微信公众号](https://images.gitee.com/uploads/images/2020/1127/113142_f6ab57bb_768204.jpeg "qrcode_for_gh_caf4624e6df8_258.jpg")
+
 
 
 
