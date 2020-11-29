@@ -36,7 +36,6 @@ https://blog.csdn.net/h356363/article/details/98381244
 https://blog.csdn.net/h356363/article/details/94054756
 
 ###  SpringBoot 集成 JPA
-
 #### 源码
 
 https://gitee.com/bseaworkspace/study_java_web/tree/master/springbootJPA
@@ -71,31 +70,9 @@ spring.jpa.hibernate.ddl-auto = update
 - @Entity 表示是一个实体类，一个实体类对应一个数据库表
 - Spring data JPA 采用hibernate实现，通过entity可以反向生成数据表
 
-#### 前端html跟后台接口（API）打交道，一般两种方式
-- html 表单form提交，通过action属性设置api的路径，这种方式的话， 
-执行完成以后，一般需要页面跳转，这种需要页面跳转的api，一般在类的上面
-会加注解 @Controller， 然后方法返回string类型的路径，就可以实现页面跳转了。
+## 更多学习资料 请关注微信公众号
 
-- ajax方法跟后台打交道，这种后台的接口，不负责页面跳转，只负责数据交互。
-所以这种接口类上一般加@RestController， 返回json格式的数据（key:value）
-
-- 在 @Controller 修饰的类里面的方法， 如果只想返回Json格式的数据，不要跳转的话，可以在
-方法的上面添加 @ResponseBody 注解，这样就相当于@RestController里面的方法了。
-
-###  SpringBoot  controller  各种接收参数的方式
-
-#### 参考博客
-https://blog.csdn.net/h356363/article/details/90510609
-
-####  地址传值
-@PathVariable
-获取路径参数。即url/{id}这种形式。
-
-
-
-## 更多学习资料关注微信公众号
-
-![Image text](https://gitee.com/bseaworkspace/study_java_web/blob/master/doc/wechatlog.jpg)
+![个人学习微信公众号](https://images.gitee.com/uploads/images/2020/1127/113142_f6ab57bb_768204.jpeg "qrcode_for_gh_caf4624e6df8_258.jpg")
 
 
 
