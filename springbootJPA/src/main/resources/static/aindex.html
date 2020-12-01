@@ -101,7 +101,7 @@
                 <h4 class="modal-title" id="myModalLabel">修改</h4>
             </div>
             <div class="modal-body">
-            <form class="form-horizontal" role="form" action="UpdateResourceServlet">
+            <form class="form-horizontal" role="form" action="/jpa/addresource">
             
             <div class="form-group">
 			<label for="firstname" class="col-sm-2 control-label">序号</label>
@@ -176,7 +176,7 @@ $(document).ready(function(){
 	  
        $("button[name='btnupdateuser']").click( function () {
     	   //alert("被点击了"+$(this).attr("id"));
-    	   $.getJSON("/servletdemo/FindResourceByIdServlet", { id: $(this).attr("id") },
+    	   $.getJSON("/jpa/getResource/"+$(this).attr("id"),
     	   function(data){
     		  
     		    $("#rid").val(data.id);

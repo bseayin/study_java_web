@@ -19,6 +19,11 @@ public class ResourceController {
 
     @RequestMapping("addresource")
     public  String add(ResourceData resourceData){
+        /**
+         * save方法是比较特殊的方法，
+         * 1，如果传入的对象，主键没有值，就执行insert 语句（sql）
+         * 2.如果传入对象，主键有值，就执行update 语句
+         */
         resourceRepository.save(resourceData);
         return "/aindex.html";
     }
@@ -36,5 +41,20 @@ public class ResourceController {
         HashMap rs=new HashMap();
         rs.put("result","删除成功");
         return  rs;
+    }
+
+    @RequestMapping("getResource/{id}")
+    @ResponseBody
+    public ResourceData getResource(@PathVariable("id") String rid){
+        /**
+         * substring 表示截取
+         * 如果只放一个参数，就表示截取的起点下标,终点就是末尾
+         * 比如： String a="abc";
+         * a.substring(1)
+         * Integer.parseInt(rid); String 转 Int
+         */
+        rid=rid.substring(1);
+        int id=Integer.parseInt(rid);
+        return  resourceRepository.findById(id).get();
     }
 }
