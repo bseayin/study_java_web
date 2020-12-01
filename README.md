@@ -83,6 +83,16 @@ Json格式的数据
 #### 参考博客
 https://blog.csdn.net/h356363/article/details/90510609
 
+###  SpringBoot  集成MyBatis
+
+#### 集成具体步骤  参考博客 
+https://blog.csdn.net/h356363/article/details/100548024
+#### 自动生成代码 mybatis generator参考博客 
+https://blog.csdn.net/h356363/article/details/90649491
+#### 源码
+https://gitee.com/bseaworkspace/study_java_web/tree/master/springbootMybatis
+
+
 
 ## 更多学习资料 请关注微信公众号
 
