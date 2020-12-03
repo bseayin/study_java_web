@@ -2,6 +2,8 @@ package com.xsz.mapper;
 
 import com.xsz.model.ResourceData;
 
+import java.util.List;
+
 public interface ResourceDataMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -10,6 +12,8 @@ public interface ResourceDataMapper {
     int insertSelective(ResourceData record);
 
     ResourceData selectByPrimaryKey(Integer id);
+
+    List<ResourceData> selectAll();
 
     int updateByPrimaryKeySelective(ResourceData record);
 
