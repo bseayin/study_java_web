@@ -7,21 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springbootMybatis" />
-        <module name="springbootbasic" />
-        <module name="springbootJPA" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="springbootbasic" target="1.8" />
-      <module name="springbootJPA" target="1.8" />
       <module name="springbootMybatis" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="springbootJPA" options="-parameters" />
       <module name="springbootMybatis" options="-parameters" />
-      <module name="springbootbasic" options="-parameters" />
     </option>
   </component>
 </project>

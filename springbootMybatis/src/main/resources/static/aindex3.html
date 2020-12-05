@@ -16,9 +16,9 @@
 	</div>
 	<div>
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="aindex.html">资料管理</a></li>
+			<li ><a href="aindex.html">资料管理</a></li>
 			<li><a href="aindex2.html">学生管理</a></li>
-			<li><a href="aindex3.html">教师管理</a></li>
+			<li class="active"><a href="aindex3.html">教师管理</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right"> 
             <li><a href="register2.html"><span class="glyphicon glyphicon-user"></span> 注册</a></li> 
@@ -30,7 +30,7 @@
 <div class="container">
    <div class="row">
       <div class="col-xs-3"></div>
-      <div class="col-xs-4"><h1>资料列表</h1></div>
+      <div class="col-xs-4"><h1>教师列表</h1></div>
        <div class="col-xs-4"></div>
       <div class="col-xs-1"></div>
    </div>
@@ -46,24 +46,17 @@
                 <h4 class="modal-title" id="myModalLabel">添加</h4>
             </div>
             <div class="modal-body">
-			    <form class="form-horizontal" role="form" action="/jpa/addresource">
+			    <form class="form-horizontal" role="form" action="/mybatis/addTeacher">
 				<div class="form-group">
-					<label for="firstname" class="col-sm-2 control-label">类型</label>
+					<label for="firstname" class="col-sm-2 control-label">姓名</label>
 					<div class="col-sm-5">
-						<input type="text" class="form-control"  name="type"
-							   placeholder="请输入类型">
+						<input type="text" class="form-control"  name="tName"
+							   placeholder="请输入姓名">
 					</div>
 					<div class="col-sm-5"></div>
 				</div>
-				<div class="form-group">
-					<label for="lastname" class="col-sm-2 control-label">内容</label>
-					<div class="col-sm-5">
-						
-					       <textarea class="form-control" rows="8" name="content"></textarea>
-					</div>
-					<div class="col-sm-5"></div>
-				</div>
-            </div>
+
+			</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                 <button type="submit" class="btn btn-primary">提交更改</button>
@@ -78,8 +71,7 @@
 		<thead>
 			<tr>
 				<th>序号</th>
-				<th>类型</th>
-				<th>内容</th>
+				<th>姓名</th>
 				<th>操作</th>
 			</tr>
 		</thead>
@@ -102,34 +94,26 @@
                 <h4 class="modal-title" id="myModalLabel">修改</h4>
             </div>
             <div class="modal-body">
-            <form class="form-horizontal" role="form" action="/jpa/addresource">
+            <form class="form-horizontal" role="form" action="/mybatis/addTeacher">
             
             <div class="form-group">
 			<label for="firstname" class="col-sm-2 control-label">序号</label>
 			<div class="col-sm-5">
-				<input type="text" class="form-control"  name="id" id="rid" readonly>
+				<input type="text" class="form-control"  name="tId" id="rid" readonly>
 			</div>
 			<div class="col-sm-5"></div>
 		</div>
 		
 		<div class="form-group">
-			<label for="firstname" class="col-sm-2 control-label">类型</label>
+			<label for="firstname" class="col-sm-2 control-label">姓名</label>
 			<div class="col-sm-5">
-				<input type="text" class="form-control"  name="type" id="updatetype"
-					   placeholder="请输入类型">
+				<input type="text" class="form-control"  name="tName" id="updatetName"
+					   placeholder="请输入姓名">
 			</div>
 			<div class="col-sm-5"></div>
 		</div>
-	
-	<div class="form-group">
-		<label for="lastname" class="col-sm-2 control-label">内容</label>
-		<div class="col-sm-5">
-			<textarea class="form-control" rows="8" name="content" id="updatecontent"></textarea>
-		</div>
-		<div class="col-sm-5"></div>
-	</div>
-	
-            </div>
+
+			</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                 <button type="submit" class="btn btn-primary">提交更改</button>
@@ -146,12 +130,12 @@
 $(document).ready(function(){
 	
 	  // 在这里写你的代码...
-	$.getJSON("/mybatis/allresource", function(data){
+	$.getJSON("/mybatis/allTeacher", function(data){
 		console.log(data);
 		 $("#ubody").empty();
        // alert("Data Loaded: " + data);
        for(var i=0;i<data.length;i++){
-    	   $("#ubody").append("<tr><td>"+data[i].id+"</td>"+"<td>"+data[i].type+"</td>"+"<td>"+data[i].content+"<td>"+"<button type='button' class='btn btn-danger' name='deletebtn' id='"+data[i].id+"'>删除</button><button class='btn btn-primary btn' data-toggle='modal' data-target='#myModalupdate'  name='btnupdateuser' id='u"+data[i].id+"'>修改</button>"+"</td></tr>");
+    	   $("#ubody").append("<tr><td>"+data[i].tId+"</td>"+"<td>"+data[i].tName+"</td>"+"<td>"+"<button type='button' class='btn btn-danger' name='deletebtn' id='"+data[i].tId+"'>删除</button><button class='btn btn-primary btn' data-toggle='modal' data-target='#myModalupdate'  name='btnupdateuser' id='u"+data[i].tId+"'>修改</button>"+"</td></tr>");
        }
        
        // name属性的值是可以重复的
@@ -167,24 +151,21 @@ $(document).ready(function(){
        **/
        $("button[name='deletebtn']").click( function () {
     	   //alert("被点击了"+$(this).attr("id"));
-    	   $.get("/jpa/deleteResource/"+$(this).attr("id"),
+    	   $.get("/mybatis/deleteTeacher/"+$(this).attr("id"),
     	   function(data){
     		    alert("删除成功！");
-    		   	window.location.href="/jpa/aindex.html"
+    		   	window.location.href="/mybatis/aindex3.html"
     		});
        });
       
 	  
        $("button[name='btnupdateuser']").click( function () {
     	   //alert("被点击了"+$(this).attr("id"));
-    	   $.getJSON("/mybatis/getResource/"+$(this).attr("id"),
+    	   $.getJSON("/mybatis/getTeacher/"+$(this).attr("id"),
     	   function(data){
     		  
-    		    $("#rid").val(data.id);
-    		    $("#updatetype").val(data.type);
-    		    $("#updatecontent").val(data.content);
-    		    
-    		    
+    		    $("#rid").val(data.tId);
+    		    $("#updatetName").val(data.tName);
     		});
        });
 	  
