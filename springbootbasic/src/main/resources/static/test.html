@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 实例</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>测试</h2>
+    <button type="button" id="t1" class="btn">t1</button>
+    <button type="button" id="t2" class="btn btn-primary">t2</button>
+    <button type="button" id="t3" class="btn btn-secondary">t3</button>
+    <button type="button" id="t4" class="btn btn-success">t4</button>
+    <button type="button" id="t5" class="btn btn-info">t5</button>
+    <button type="button" id="t6" class="btn btn-warning">t6</button>
+</div>
+<script>
+$(document).ready(function(){
+// 在这里写你的代码...
+$("#t1").click(function(){
+    $.get("test/t1/jacky", function(data){
+        alert("Data Loaded: " + data.rs);
+    });
+})
+
+    $("#t2").click(function(){
+        $.get("test/t2?p1=jerry", function(data){
+            alert("Data Loaded: " + data.rs);
+        });
+    })
+
+
+    $("#t3").click(function(){
+        var data =  {"content" :"petter","type" : "123"}
+        $.ajax({
+            url : "test/t3",
+            async : false,
+            type : "POST",
+            contentType : 'application/json',
+            dataType : 'json',
+            data :JSON.stringify(data),
+            success : function(data) {
+                alert("Data Loaded: " + data.rs);
+            }
+        });
+    })
+    $("#t4").click(function(){
+
+        $.ajax({
+            url : "test/t4?content=jacky",
+            async : false,
+            type : "POST",
+            contentType : 'form-data',
+            success : function(data) {
+                alert("Data Loaded: " + data.rs);
+            }
+        });
+    })
+// 暂时不通
+    $("#t5").click(function(){
+        var data =  {"name" :"petter","pwd" : "123"}
+        $.ajax({
+            url : "test/t5",
+            async : false,
+            type : "POST",
+            contentType : 'application/json',
+            dataType : 'json',
+            headers: {
+
+                'Header':"from header",
+                'Cookie':'sdfs'
+            },
+            data :JSON.stringify(data),
+            success : function(data) {
+                alert("Data Loaded: " + data.rs);
+            }
+        });
+    })
+    $("#t6").click(function(){
+        $.get("test/t6?content=jerry&type=234", function(data){
+            alert("Data Loaded: " + data.rs);
+        });
+    })
+
+});
+</script>
+</body>
+</html>
