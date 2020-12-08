@@ -88,6 +88,24 @@
 			
 		</tbody>
 </table>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-3"></div>
+			<div class="col-xs-4">
+				<ul class="pagination" id="pageul">
+
+				</ul>
+
+			</div>
+			<div class="col-xs-4"></div>
+			<div class="col-xs-1"></div>
+		</div>
+	</div>
+
+
+
+
 </div>  	
 
 
@@ -144,16 +162,22 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
-	
-	  // 在这里写你的代码...
-	$.getJSON("/mybatis/allresource", function(data){
-		console.log(data);
+	function load(data){
+	console.log(data);
 		 $("#ubody").empty();
        // alert("Data Loaded: " + data);
-       for(var i=0;i<data.length;i++){
-    	   $("#ubody").append("<tr><td>"+data[i].id+"</td>"+"<td>"+data[i].type+"</td>"+"<td>"+data[i].content+"<td>"+"<button type='button' class='btn btn-danger' name='deletebtn' id='"+data[i].id+"'>删除</button><button class='btn btn-primary btn' data-toggle='modal' data-target='#myModalupdate'  name='btnupdateuser' id='u"+data[i].id+"'>修改</button>"+"</td></tr>");
+       for(var i=0;i<data.list.length;i++){
+    	   $("#ubody").append("<tr><td>"+data.list[i].id+"</td>"+"<td>"+data.list[i].type+"</td>"+"<td>"+data.list[i].content+"<td>"+"<button type='button' class='btn btn-danger' name='deletebtn' id='"+data.list[i].id+"'>删除</button><button class='btn btn-primary btn' data-toggle='modal' data-target='#myModalupdate'  name='btnupdateuser' id='u"+data.list[i].id+"'>修改</button>"+"</td></tr>");
        }
-       
+ 	  $("#pageul").empty();
+ 	   $("#pageul").append("<li><a href='#'>&laquo;</a></li>")
+
+ 	  for(var i=1;i<data.pages+1;i++){
+
+    	    $("#pageul").append("<li name='pageli' id='page"+i+"'><a href='#'>"+i+"</a></li>")
+       }
+       $("#pageul").append("<li><a href='#'>&raquo;</a></li>")
+
        // name属性的值是可以重复的
        //id的属性值是不能重复的
        //jquery选择器的意思就是去找到页面上的各种元素
@@ -163,7 +187,7 @@ $(document).ready(function(){
         click(function(){点击以后，要执行的代码})
                          弹出提示框： alert("提示的内容")
         $(this).attr("属性的名字")) 返回被点击元素的属性的值
-       
+
        **/
        $("button[name='deletebtn']").click( function () {
     	   //alert("被点击了"+$(this).attr("id"));
@@ -173,26 +197,39 @@ $(document).ready(function(){
     		   	window.location.href="/jpa/aindex.html"
     		});
        });
-      
-	  
+
+       $("button[name='pageli']").click( function () {
+		alert("pageli！");
+    	   $.get("/mybatis/allresourcepage/"+$(this).attr("id"),
+    	   function(data){
+    		    load(data);
+    		});
+       });
+
        $("button[name='btnupdateuser']").click( function () {
     	   //alert("被点击了"+$(this).attr("id"));
     	   $.getJSON("/mybatis/getResource/"+$(this).attr("id"),
     	   function(data){
-    		  
+
     		    $("#rid").val(data.id);
     		    $("#updatetype").val(data.type);
     		    $("#updatecontent").val(data.content);
-    		    
-    		    
+
+
     		});
        });
-	  
-       
-		
+	}
+	  // 在这里写你的代码...
+	$.getJSON("/mybatis/allresourcepage/page1", function(data){
+	  load(data);
 	});
+
+
 	  
 	});
+
+
+
 
 </script>
 

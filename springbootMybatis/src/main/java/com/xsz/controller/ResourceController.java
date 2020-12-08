@@ -1,4 +1,6 @@
 package com.xsz.controller;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.xsz.mapper.ResourceDataMapper;
 import com.xsz.model.ResourceData;
 import org.springframework.stereotype.Controller;
@@ -25,6 +27,23 @@ public class ResourceController {
 
 //        resourceRepository.save(resourceData);
         return "/aindex.html";
+    }
+
+    @RequestMapping("allresourcepage/{pagenum}")
+    @ResponseBody
+    public PageInfo<ResourceData> getAll2(@PathVariable("pagenum") String pagenum){
+        /**
+         *  PageHelper.startPage(1, 3);
+         *  第一个参数表示页码，就是第几页。 从1开始
+         *  第二个参数表示，一页显示多少行数据
+         */
+        pagenum=pagenum.substring(4);
+        int pagenum2=Integer.parseInt(pagenum);
+        PageHelper.startPage(pagenum2, 3);
+        List<ResourceData> list= resourceRepository.selectAll();
+        PageInfo<ResourceData> pageInfo = new PageInfo<ResourceData>(list);
+//        List<ResourceData> result = pageInfo.getList();
+        return  pageInfo;
     }
 
     @RequestMapping("allresource")

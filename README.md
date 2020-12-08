@@ -91,7 +91,36 @@ https://blog.csdn.net/h356363/article/details/100548024
 https://blog.csdn.net/h356363/article/details/90649491
 #### 源码
 https://gitee.com/bseaworkspace/study_java_web/tree/master/springbootMybatis
+#### pagehelper 分页插件
 
+实现步骤
+- 第一步： 添加对应的jar在pom文件中。
+<!--pagehelper 分页插件-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+- 第二步： 在controller中配置相关参数
+
+   ``` 
+    /**
+            *  PageHelper.startPage(1, 3);
+            *  第一个参数表示页码，就是第几页。 从1开始
+            *  第二个参数表示，一页显示多少行数据
+            */
+   @RequestMapping("allresourcepage")
+    @ResponseBody
+    public List<ResourceData> getAll2(ResourceData resourceData){``
+        
+       
+        PageHelper.startPage(1, 3);
+        List<ResourceData> list= resourceRepository.selectAll();
+        PageInfo<ResourceData> pageInfo = new PageInfo<ResourceData>(list);
+        List<ResourceData> result = pageInfo.getList();
+        return  pageInfo.getList();
+    }`
+    
 
 
 ## 更多学习资料 请关注微信公众号
