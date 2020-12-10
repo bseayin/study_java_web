@@ -3,6 +3,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.xsz.mapper.ResourceDataMapper;
 import com.xsz.model.ResourceData;
+import com.xsz.util.KeyUtil;
 import com.xsz.util.QueryRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,11 +24,26 @@ public class ResourceController {
         if(resourceData.getId()!=null){
             resourceRepository.updateByPrimaryKeySelective(resourceData);
         }else{
+            resourceData.setId(KeyUtil.genUniqueIntegerKey());
             resourceRepository.insert(resourceData);
         }
 
 //        resourceRepository.save(resourceData);
         return "/aindex.html";
+    }
+
+
+    @RequestMapping("addRe")
+    public  String add2(ResourceData resourceData){
+        if(resourceData.getId()!=null){
+            resourceRepository.updateByPrimaryKeySelective(resourceData);
+        }else{
+            resourceData.setId(KeyUtil.genUniqueIntegerKey());
+            resourceRepository.insert(resourceData);
+        }
+
+//        resourceRepository.save(resourceData);
+        return "/bootstraptabledemo3.html";
     }
 
     @RequestMapping("allresourcepage")

@@ -28,6 +28,13 @@ public class KeyUtil {
         return Long.parseLong(System.currentTimeMillis() + String.valueOf(number));
     }
 
+    public static synchronized Integer genUniqueIntegerKey() {
+        Random random = new Random();
+        Integer number = random.nextInt(900000) + 100000;
+
+        return number;
+    }
+
     public static void main(String[] args) {
        String id= KeyUtil.genUniqueKey();
         System.out.println(id);
