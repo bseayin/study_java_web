@@ -38,12 +38,34 @@ public class ResourceController {
          *  第一个参数表示页码，就是第几页。 从1开始
          *  第二个参数表示，一页显示多少行数据
          */
-//        pagenum=pagenum.substring(4);
-//        int pagenum2=Integer.parseInt(pagenum);
         PageHelper.startPage(queryRequest.getPageNum(), queryRequest.getPageSize());
         List<ResourceData> list= resourceRepository.selectAll();
         PageInfo<ResourceData> pageInfo = new PageInfo<ResourceData>(list);
-//        List<ResourceData> result = pageInfo.getList();
+        Map<String, Object> rspData = new HashMap<>();
+        rspData.put("rows", pageInfo.getList());
+        rspData.put("total", pageInfo.getTotal());
+        return  rspData;
+    }
+
+
+    @RequestMapping("pagelist")
+    @ResponseBody
+    public  Map<String, Object> getAll3(QueryRequest queryRequest,ResourceData resourceData){
+        /**
+         *  PageHelper.startPage(1, 3);
+         *  第一个参数表示页码，就是第几页。 从1开始
+         *  第二个参数表示，一页显示多少行数据
+         */
+        System.out.println("后台接收到的资料类型="+resourceData.getType());
+        PageHelper.startPage(queryRequest.getPageNum(), queryRequest.getPageSize());
+        List<ResourceData> list=null;
+        if(resourceData.getType()!=""){
+            list= resourceRepository.selectByType(resourceData.getType());
+        }else{
+            list= resourceRepository.selectAll();
+        }
+
+        PageInfo<ResourceData> pageInfo = new PageInfo<ResourceData>(list);
         Map<String, Object> rspData = new HashMap<>();
         rspData.put("rows", pageInfo.getList());
         rspData.put("total", pageInfo.getTotal());

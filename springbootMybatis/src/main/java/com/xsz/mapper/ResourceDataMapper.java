@@ -14,6 +14,8 @@ public interface ResourceDataMapper {
     ResourceData selectByPrimaryKey(Integer id);
 
     List<ResourceData> selectAll();
+    List<ResourceData> selectByType(String type);
+
 
     int updateByPrimaryKeySelective(ResourceData record);
 

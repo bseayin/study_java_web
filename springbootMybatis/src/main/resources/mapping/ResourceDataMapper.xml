@@ -23,6 +23,12 @@
 
   </select>
 
+    <select id="selectByType" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from resource_data
+        where type = #{type,jdbcType=VARCHAR}
+    </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from resource_data
