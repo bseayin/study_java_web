@@ -3,6 +3,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.xsz.mapper.ResourceDataMapper;
 import com.xsz.model.ResourceData;
+import com.xsz.util.QueryRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,21 +30,24 @@ public class ResourceController {
         return "/aindex.html";
     }
 
-    @RequestMapping("allresourcepage/{pagenum}")
+    @RequestMapping("allresourcepage")
     @ResponseBody
-    public PageInfo<ResourceData> getAll2(@PathVariable("pagenum") String pagenum){
+    public  Map<String, Object> getAll2(QueryRequest queryRequest){
         /**
          *  PageHelper.startPage(1, 3);
          *  第一个参数表示页码，就是第几页。 从1开始
          *  第二个参数表示，一页显示多少行数据
          */
-        pagenum=pagenum.substring(4);
-        int pagenum2=Integer.parseInt(pagenum);
-        PageHelper.startPage(pagenum2, 3);
+//        pagenum=pagenum.substring(4);
+//        int pagenum2=Integer.parseInt(pagenum);
+        PageHelper.startPage(queryRequest.getPageNum(), queryRequest.getPageSize());
         List<ResourceData> list= resourceRepository.selectAll();
         PageInfo<ResourceData> pageInfo = new PageInfo<ResourceData>(list);
 //        List<ResourceData> result = pageInfo.getList();
-        return  pageInfo;
+        Map<String, Object> rspData = new HashMap<>();
+        rspData.put("rows", pageInfo.getList());
+        rspData.put("total", pageInfo.getTotal());
+        return  rspData;
     }
 
     @RequestMapping("allresource")
