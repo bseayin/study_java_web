@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/corejava-demo/corejava-demo.iml" filepath="$PROJECT_DIR$/corejava-demo/corejava-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springIntegrationHelloWorld/springIntegrationHelloWorld.iml" filepath="$PROJECT_DIR$/springIntegrationHelloWorld/springIntegrationHelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbatchstart/springbatchstart.iml" filepath="$PROJECT_DIR$/springbatchstart/springbatchstart.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" filepath="$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootbasic/springbootbasic.iml" filepath="$PROJECT_DIR$/springbootbasic/springbootbasic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboottest/springboottest.iml" filepath="$PROJECT_DIR$/springboottest/springboottest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/study.iml" filepath="$PROJECT_DIR$/.idea/study.iml" />
     </modules>
   </component>

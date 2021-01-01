@@ -6,19 +6,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springintegrationHelloWord" />
+        <module name="corejava-demo" />
+        <module name="springboottest" />
+        <module name="springIntegrationHelloWorld" />
         <module name="springbootbasic" />
         <module name="springbootMybatis" />
+        <module name="springbatchstart" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="corejava-demo" target="1.5" />
+      <module name="springbatchstart" target="1.8" />
       <module name="springbootbasic" target="1.8" />
       <module name="springbootMybatis" target="1.8" />
+      <module name="springboottest" target="1.8" />
+      <module name="springintegration" target="1.5" />
+      <module name="springintegrationHelloWord" target="1.5" />
+      <module name="springIntegrationHelloWorld" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springbatchstart" options="-parameters" />
       <module name="springbootMybatis" options="-parameters" />
       <module name="springbootbasic" options="-parameters" />
+      <module name="springboottest" options="-parameters" />
     </option>
   </component>
 </project>

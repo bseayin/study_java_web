@@ -16,6 +16,8 @@ public class MapDemo1 {
 		//ȡֵ
 		String t1=(String) map.get("name");
 		System.out.println(t1);
+		String sss=(String) map.get("age");
+		System.out.println(sss);
 		
 		
 		

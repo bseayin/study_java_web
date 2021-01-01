@@ -5,6 +5,10 @@
       <list>
         <option value="$PROJECT_DIR$/springbootMybatis/pom.xml" />
         <option value="$PROJECT_DIR$/springbootbasic/pom.xml" />
+        <option value="$PROJECT_DIR$/corejava-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springbatchstart/pom.xml" />
+        <option value="$PROJECT_DIR$/springboottest/pom.xml" />
+        <option value="$PROJECT_DIR$/springIntegrationHelloWorld/pom.xml" />
       </list>
     </option>
   </component>

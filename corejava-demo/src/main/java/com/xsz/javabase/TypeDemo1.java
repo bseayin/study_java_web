@@ -4,25 +4,22 @@ public class TypeDemo1 {
 	
 
 	public static void main(String[] args) {
-		// Ò»¹²8¸ö»ù±¾ÀàĞÍ
-		// TODO Auto-generated method stub
-		//ÕûÊı  ×î´óÖµ127£¬×îĞ¡Öµ-128
-		byte a1=127;
-		//ÕûÊı  ×î´óÖµÊÇ 32767£¨2^15 - 1£©£»£¬×îĞ¡ÖµÊÇ -32768£¨-2^15£©£»
-		short a2=1000;
-		//ÕûÊı  ×îĞ¡ÖµÊÇ -2,147,483,648£¨-2^31£©×î´óÖµÊÇ 2,147,483,647£¨2^31 - 1£©£»
-		int a3=50000;
-		//ÕûÊı ×îĞ¡ÖµÊÇ -9,223,372,036,854,775,808£¨-2^63£©£» ×î´óÖµÊÇ 9,223,372,036,854,775,807£¨2^63 -1£©£»£»
-		long a4=888888888L;
-		//¸¡µãĞÍ
-		float a5=8.3f;
-		
-		double a6=8.34d;
-		//Ö»ÓĞÁ½¸öÈ¡Öµ£ºtrue ºÍ false£»
-		boolean a7=true;
-		//charÀàĞÍ£¬ĞèÒªµ¥ÒıºÅ
-		char a8='a';
-		char a9='ÖĞ';
+		//å®šä¹‰å­—èŠ‚å‹å˜é‡
+		byte b = 100; System.out.println(b);
+//å®šä¹‰çŸ­æ•´å‹å˜é‡
+		short s = 1000; System.out.println(s);
+//å®šä¹‰æ•´å‹å˜é‡
+		int i = 123456; System.out.println(i);
+//å®šä¹‰é•¿æ•´å‹å˜é‡
+		long l = 12345678900L; System.out.println(l);
+//å®šä¹‰å•ç²¾åº¦æµ®ç‚¹å‹å˜é‡
+		float f = 5.5F; System.out.println(f);
+//å®šä¹‰åŒç²¾åº¦æµ®ç‚¹å‹å˜é‡
+		double d = 8.5; System.out.println(d);
+//å®šä¹‰å¸ƒå°”å‹å˜é‡
+		boolean bool = false; System.out.println(bool);
+//å®šä¹‰å­—ç¬¦å‹å˜é‡
+		char c = 'A'; System.out.println(c);
 
 		
 		
