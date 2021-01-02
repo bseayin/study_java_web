@@ -29,10 +29,26 @@ public class HelloWorldApp {
     private static Log logger = LogFactory.getLog(HelloWorldApp.class);
 
     public static void main(String[] args) {
-        AbstractApplicationContext context = new ClassPathXmlApplicationContext("/META-INF/spring/integration/helloWorldDemo.xml", HelloWorldApp.class);
+        /**
+         * ClassPathXmlApplicationContext Spring IOC 容器
+         * 第一个参数 xml文件路径
+         * 第二个参数JVM 创建对应对象
+         */
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("/META-INF/spring/integration/helloWorldDemo.xml",
+                HelloWorldApp.class);
+        /**
+         * Channel： 消息发送者发送消息到通道(Channel)，消息接受者从通道(Channel)接收消息
+         *
+         */
         MessageChannel inputChannel = context.getBean("inputChannel", MessageChannel.class);
         PollableChannel outputChannel = context.getBean("outputChannel", PollableChannel.class);
         inputChannel.send(new GenericMessage<String>("World"));
+        /**
+         *  PollableChannel.receive(long timeout)
+         *  Receive the first available message from this channel.
+         *  If the specified timeout is 0, the method will return immediately
+         */
+
         logger.info("==> HelloWorldDemo: " + outputChannel.receive(0).getPayload());
         context.close();
     }

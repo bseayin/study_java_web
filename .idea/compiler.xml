@@ -9,6 +9,7 @@
         <module name="springintegrationHelloWord" />
         <module name="corejava-demo" />
         <module name="springboottest" />
+        <module name="springintegrationHttp" />
         <module name="springIntegrationHelloWorld" />
         <module name="springbootbasic" />
         <module name="springbootMybatis" />
@@ -24,6 +25,7 @@
       <module name="springintegration" target="1.5" />
       <module name="springintegrationHelloWord" target="1.5" />
       <module name="springIntegrationHelloWorld" target="1.5" />
+      <module name="springintegrationHttp" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
