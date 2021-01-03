@@ -8,13 +8,13 @@
 		http://www.springframework.org/schema/integration/http https://www.springframework.org/schema/integration/http/spring-integration-http.xsd">
 
     <int:gateway id="requestGateway"
-                 service-interface="org.springframework.integration.samples.http.RequestGateway"
+                 service-interface="com.xsz.RequestGateway"
                  default-request-channel="requestChannel"/>
 
     <int:channel id="requestChannel"/>
 
     <int-http:outbound-gateway request-channel="requestChannel"
-                               url="http://localhost:8080/http/receiveGateway"
+                               url="http://localhost:9001/springboot1/server"
                                http-method="POST"
                                expected-response-type="java.lang.String"/>
 

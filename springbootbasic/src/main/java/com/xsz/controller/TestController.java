@@ -18,6 +18,12 @@ public class TestController {
         return "hello springboot2 ";
     }
 
+
+    @RequestMapping("/server")
+    public String testintegration() {
+        return "from integration http demo server ";
+    }
+
     /**
      *   @Value("${myversion}") 获取配置文件上的自定义属性的值
      * @return
