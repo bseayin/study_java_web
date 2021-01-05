@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/springboottest/pom.xml" />
         <option value="$PROJECT_DIR$/springIntegrationHelloWorld/pom.xml" />
         <option value="$PROJECT_DIR$/springintegrationHttp/pom.xml" />
+        <option value="$PROJECT_DIR$/springIntegrationJPA/pom.xml" />
       </list>
     </option>
   </component>
