@@ -7,10 +7,10 @@ public class HashSetDemo {
         HashSet<String> set = new HashSet<String>();
         //添加元素
          set.add(new String("cba"));
-         set.add("abc");
-         set.add("bac");
-         set.add("bac");
-         set.add("cba");
+         set.add("1abc");
+         set.add("2bac");
+         set.add("3bac");
+         set.add("4cba");
 //         遍历
          for (String name : set)
          {

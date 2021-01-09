@@ -12,7 +12,16 @@ public class Student {
 	public String getName(){
 		return this.name; 
 	}
-	
+
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 	public static void main(String[] args){
 		//一般情况，如果要执行方法，需要先创建对象
 		//1 创建一个对象
