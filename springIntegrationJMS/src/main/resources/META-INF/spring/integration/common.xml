@@ -6,9 +6,10 @@
 			https://www.springframework.org/schema/beans/spring-beans.xsd
 			http://www.springframework.org/schema/integration
 			https://www.springframework.org/schema/integration/spring-integration.xsd">
-
+    <!-- Spring用于管理真正的ConnectionFactory的ConnectionFactory -->
     <bean id="jmsConnectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
         <property name="targetConnectionFactory">
+            <!-- 目标ConnectionFactory对应真实的可以产生JMS Connection的ConnectionFactory -->
             <bean class="org.apache.activemq.ActiveMQConnectionFactory">
                 <property name="brokerURL" value="vm://localhost?broker.persistent=false"/>
             </bean>

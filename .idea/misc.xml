@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/springIntegrationJPA/pom.xml" />
         <option value="$PROJECT_DIR$/springIntegrationKafka/pom.xml" />
         <option value="$PROJECT_DIR$/springIntegrationJMS/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootEmbbededActiveMQ/pom.xml" />
       </list>
     </option>
   </component>
