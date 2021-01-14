@@ -2,25 +2,28 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springbootMybatis" />
         <module name="springintegrationHelloWord" />
         <module name="corejava-demo" />
         <module name="springboottest" />
-        <module name="springintegrationHttp" />
         <module name="springIntegrationHelloWorld" />
-        <module name="springIntegrationJMS" />
         <module name="springIntegrationKafka" />
-        <module name="springbootbasic" />
-        <module name="springIntegrationJPA" />
-        <module name="springbatchstart" />
         <module name="springbootEmbbededActiveMQ" />
+        <module name="springbatchstart" />
+        <module name="coreJava" />
+        <module name="springIntegrationJMS" />
+        <module name="springbootbasic" />
+        <module name="springbootMybatis" />
+        <module name="springintegrationHttp" />
+        <module name="springIntegrationJPA" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="coreJava" target="8" />
       <module name="corejava-demo" target="1.5" />
       <module name="springbatchstart" target="1.8" />
       <module name="springbootbasic" target="1.8" />

@@ -21,10 +21,10 @@ public class Product {
     }
 
     public boolean equals(Object o) {
-        // Èç¹û¶ÔÏóµØÖ·Ò»Ñù£¬ÔòÈÏÎªÏàÍ¬
+        // å¦‚æœå¯¹è±¡åœ°å€ä¸€æ ·ï¼Œåˆ™è®¤ä¸ºç›¸åŒ
         if (this == o)
             return true;
-        // Èç¹û²ÎÊıÎª¿Õ£¬»òÕßÀàĞÍĞÅÏ¢²»Ò»Ñù£¬ÔòÈÏÎª²»Í¬
+        // å¦‚æœå‚æ•°ä¸ºç©ºï¼Œæˆ–è€…ç±»å‹ä¿¡æ¯ä¸ä¸€æ ·ï¼Œåˆ™è®¤ä¸ºä¸åŒ
         if (o == null || getClass() != o.getClass())
             return false;
         Product product=(Product)o;
@@ -39,6 +39,6 @@ public class Product {
 
     public String toString() {
 
-        return "²úÆ·Ãû×Ö="+this.name+"  Éú²úÈÕÆÚ="+this.createDate;
+        return "äº§å“åå­—="+this.name+"  ç”Ÿäº§æ—¥æœŸ="+this.createDate;
     }
 }

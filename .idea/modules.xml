@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/coreJava/coreJava.iml" filepath="$PROJECT_DIR$/coreJava/coreJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/corejava-demo/corejava-demo.iml" filepath="$PROJECT_DIR$/corejava-demo/corejava-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/springIntegrationHelloWorld/springIntegrationHelloWorld.iml" filepath="$PROJECT_DIR$/springIntegrationHelloWorld/springIntegrationHelloWorld.iml" />
       <module fileurl="file://$PROJECT_DIR$/springIntegrationJMS/springIntegrationJMS.iml" filepath="$PROJECT_DIR$/springIntegrationJMS/springIntegrationJMS.iml" />

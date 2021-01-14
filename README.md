@@ -121,8 +121,13 @@ https://gitee.com/bseaworkspace/study_java_web/tree/master/springbootMybatis
         return  pageInfo.getList();
     }`
     
+## SpringIntegration 系列
 
+源码地址：
+https://gitee.com/bseaworkspace/study_java_web/tree/master/springIntegrationJMS
 
+博客地址：
+https://blog.csdn.net/h356363/article/details/112398340#comments_14565051
 ## 更多学习资料 请关注微信公众号
 
 ![个人学习微信公众号](https://images.gitee.com/uploads/images/2020/1127/113142_f6ab57bb_768204.jpeg "qrcode_for_gh_caf4624e6df8_258.jpg")
