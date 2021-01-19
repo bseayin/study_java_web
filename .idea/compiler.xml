@@ -10,16 +10,16 @@
         <module name="springintegrationHelloWord" />
         <module name="corejava-demo" />
         <module name="springboottest" />
+        <module name="springintegrationHttp" />
         <module name="springIntegrationHelloWorld" />
-        <module name="springIntegrationKafka" />
-        <module name="springbootEmbbededActiveMQ" />
-        <module name="springbatchstart" />
+        <module name="springIntegrationJPA" />
         <module name="coreJava" />
         <module name="springIntegrationJMS" />
+        <module name="springbatchstart" />
         <module name="springbootbasic" />
         <module name="springbootMybatis" />
-        <module name="springintegrationHttp" />
-        <module name="springIntegrationJPA" />
+        <module name="springIntegrationKafka" />
+        <module name="springbootEmbbededActiveMQ" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -34,7 +34,7 @@
       <module name="springintegrationHttp" target="1.5" />
       <module name="springIntegrationJMS" target="1.5" />
       <module name="springIntegrationJPA" target="1.5" />
-      <module name="springIntegrationKafka" target="1.5" />
+      <module name="springIntegrationKafka" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
