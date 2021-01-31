@@ -7,38 +7,47 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springintegrationHelloWord" />
+        <module name="springbootMybatis" />
         <module name="corejava-demo" />
+        <module name="springbatchstart" />
+        <module name="springIntegrationJPA" />
+        <module name="springIntegrationHelloWorld" />
+        <module name="springbootEmbbededActiveMQ" />
         <module name="springboottest" />
         <module name="springintegrationHttp" />
-        <module name="springIntegrationHelloWorld" />
-        <module name="springIntegrationJPA" />
-        <module name="coreJava" />
-        <module name="springIntegrationJMS" />
-        <module name="springbatchstart" />
-        <module name="springbootbasic" />
-        <module name="springbootMybatis" />
+        <module name="springbatchhelloworld" />
         <module name="springIntegrationKafka" />
-        <module name="springbootEmbbededActiveMQ" />
+        <module name="springbootbasic" />
+        <module name="coreJava" />
+        <module name="springintegrationHelloWord" />
+        <module name="springBatchFileToDBDemo" />
+        <module name="springDemo" />
+        <module name="springIntegrationJMS" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="coreJava" target="8" />
       <module name="corejava-demo" target="1.5" />
+      <module name="springBatchFileToDBDemo" target="1.8" />
+      <module name="springbatchhelloworld" target="11" />
       <module name="springbatchstart" target="1.8" />
       <module name="springbootbasic" target="1.8" />
       <module name="springbootEmbbededActiveMQ" target="1.8" />
       <module name="springbootMybatis" target="1.8" />
       <module name="springboottest" target="1.8" />
+      <module name="springDemo" target="1.8" />
       <module name="springIntegrationHelloWorld" target="1.5" />
       <module name="springintegrationHttp" target="1.5" />
       <module name="springIntegrationJMS" target="1.5" />
       <module name="springIntegrationJPA" target="1.5" />
-      <module name="springIntegrationKafka" target="8" />
+      <module name="springIntegrationKafka" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springBatchFileToDBDemo" options="-parameters" />
+      <module name="springDemo" options="-parameters" />
+      <module name="springbatchhelloworld" options="-parameters" />
       <module name="springbatchstart" options="-parameters" />
       <module name="springbootMybatis" options="-parameters" />
       <module name="springbootbasic" options="-parameters" />
