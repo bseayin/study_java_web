@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -8,6 +9,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springbootMybatis" />
+        <module name="mybatisDemo" />
         <module name="corejava-demo" />
         <module name="springbatchstart" />
         <module name="springIntegrationJPA" />
@@ -28,6 +30,7 @@
     <bytecodeTargetLevel target="8">
       <module name="coreJava" target="8" />
       <module name="corejava-demo" target="1.5" />
+      <module name="mybatisDemo" target="8" />
       <module name="springBatchFileToDBDemo" target="1.8" />
       <module name="springbatchhelloworld" target="11" />
       <module name="springbatchstart" target="1.8" />

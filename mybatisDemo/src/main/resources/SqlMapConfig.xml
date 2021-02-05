@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver" ></property>
+                <property name="url" value="jdbc:mysql://localhost:3306/java12i?serverTimezone=Asia/Shanghai" ></property>
+                <property name="username" value="root"></property>
+                <property name="password" value="XSZ202006a"></property>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 告知 mybatis 映射配置的位置 --> <mappers> <mapper resource="dao/IUserDao.xml"/>
+</mappers>
+</configuration>
