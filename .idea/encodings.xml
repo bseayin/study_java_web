@@ -3,14 +3,26 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/corejava-demo/src/main/java/com/xsz/v2/basic/day5/Product.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springBatchFileToDBDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springBatchFileToDBDemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springBatchPartition" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springBatchPartition/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springDemo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springIntegrationHelloWorld/src/main/java/com/xsz/HelloWorldApp.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/springbatchdemo1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbatchdemobasic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbatchhelloworld" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbatchhelloworld/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbatchstart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbatchstart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootEmbbededActiveMQ" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootEmbbededActiveMQ/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootMybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootMybatis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbootbasic" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootbasic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboottest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboottest/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

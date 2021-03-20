@@ -8,31 +8,39 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springbootMybatis" />
-        <module name="mybatisDemo" />
-        <module name="corejava-demo" />
-        <module name="springbatchstart" />
-        <module name="springIntegrationJPA" />
-        <module name="springIntegrationHelloWorld" />
+        <module name="springbatchdemobasic" />
         <module name="springbootEmbbededActiveMQ" />
-        <module name="springboottest" />
-        <module name="springintegrationHttp" />
-        <module name="springbatchhelloworld" />
-        <module name="springIntegrationKafka" />
         <module name="springbootbasic" />
         <module name="coreJava" />
-        <module name="springintegrationHelloWord" />
-        <module name="springBatchFileToDBDemo" />
-        <module name="springDemo" />
+        <module name="springbatchdemo1" />
+        <module name="springBatchPartition" />
+        <module name="springbatchhelloworld" />
         <module name="springIntegrationJMS" />
+        <module name="springbatchstart" />
+        <module name="springbootMybatis" />
+        <module name="springboottest" />
+        <module name="springBatchFileToDBDemo" />
+        <module name="springintegrationHttp" />
+        <module name="springIntegrationHelloWorld" />
+        <module name="springDemo" />
+        <module name="junitTestDemo" />
+        <module name="springIntegrationJPA" />
+        <module name="corejava-demo" />
+        <module name="springintegrationHelloWord" />
+        <module name="mybatisDemo" />
+        <module name="springIntegrationKafka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="coreJava" target="8" />
       <module name="corejava-demo" target="1.5" />
-      <module name="mybatisDemo" target="8" />
+      <module name="junitTestDemo" target="8" />
+      <module name="mybatisDemo" target="1.5" />
+      <module name="springbatchdemo1" target="1.8" />
+      <module name="springbatchdemobasic" target="8" />
       <module name="springBatchFileToDBDemo" target="1.8" />
       <module name="springbatchhelloworld" target="11" />
+      <module name="springBatchPartition" target="1.8" />
       <module name="springbatchstart" target="1.8" />
       <module name="springbootbasic" target="1.8" />
       <module name="springbootEmbbededActiveMQ" target="1.8" />
@@ -49,7 +57,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="springBatchFileToDBDemo" options="-parameters" />
+      <module name="springBatchPartition" options="-parameters" />
       <module name="springDemo" options="-parameters" />
+      <module name="springbatchdemo1" options="-parameters" />
+      <module name="springbatchdemobasic" options="-parameters" />
       <module name="springbatchhelloworld" options="-parameters" />
       <module name="springbatchstart" options="-parameters" />
       <module name="springbootMybatis" options="-parameters" />

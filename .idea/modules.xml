@@ -4,13 +4,17 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/coreJava/coreJava.iml" filepath="$PROJECT_DIR$/coreJava/coreJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/corejava-demo/corejava-demo.iml" filepath="$PROJECT_DIR$/corejava-demo/corejava-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/junitTestDemo/junitTestDemo.iml" filepath="$PROJECT_DIR$/junitTestDemo/junitTestDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatisDemo/mybatisDemo.iml" filepath="$PROJECT_DIR$/mybatisDemo/mybatisDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/springBatchFileToDBDemo/springBatchFileToDBDemo.iml" filepath="$PROJECT_DIR$/springBatchFileToDBDemo/springBatchFileToDBDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBatchPartition/springBatchPartition.iml" filepath="$PROJECT_DIR$/springBatchPartition/springBatchPartition.iml" />
       <module fileurl="file://$PROJECT_DIR$/springDemo/springDemo.iml" filepath="$PROJECT_DIR$/springDemo/springDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/springIntegrationHelloWorld/springIntegrationHelloWorld.iml" filepath="$PROJECT_DIR$/springIntegrationHelloWorld/springIntegrationHelloWorld.iml" />
       <module fileurl="file://$PROJECT_DIR$/springIntegrationJMS/springIntegrationJMS.iml" filepath="$PROJECT_DIR$/springIntegrationJMS/springIntegrationJMS.iml" />
       <module fileurl="file://$PROJECT_DIR$/springIntegrationJPA/springIntegrationJPA.iml" filepath="$PROJECT_DIR$/springIntegrationJPA/springIntegrationJPA.iml" />
       <module fileurl="file://$PROJECT_DIR$/springIntegrationKafka/springIntegrationKafka.iml" filepath="$PROJECT_DIR$/springIntegrationKafka/springIntegrationKafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbatchdemo1/springbatchdemo1.iml" filepath="$PROJECT_DIR$/springbatchdemo1/springbatchdemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbatchdemobasic/springbatchdemobasic.iml" filepath="$PROJECT_DIR$/springbatchdemobasic/springbatchdemobasic.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbatchhelloworld/springbatchhelloworld.iml" filepath="$PROJECT_DIR$/springbatchhelloworld/springbatchhelloworld.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbatchstart/springbatchstart.iml" filepath="$PROJECT_DIR$/springbatchstart/springbatchstart.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootEmbbededActiveMQ/springbootEmbbededActiveMQ.iml" filepath="$PROJECT_DIR$/springbootEmbbededActiveMQ/springbootEmbbededActiveMQ.iml" />

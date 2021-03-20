@@ -36,7 +36,9 @@ public class DefaultSqlSession implements SqlSession {
         System.out.println(conn);
         T daoProxy = (T) Proxy.newProxyInstance(daoClass.getClassLoader(),new
                 Class[] {daoClass}, new MapperProxyFactory(cfg.getMappers(),conn));
-        return daoProxy; }//释放资源
+        return daoProxy;
+    }
+    //释放资源
     @Override
     public void close() {
         try {

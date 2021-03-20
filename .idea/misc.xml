@@ -19,8 +19,12 @@
         <option value="$PROJECT_DIR$/springbatchhelloworld/pom.xml" />
         <option value="$PROJECT_DIR$/springDemo/pom.xml" />
         <option value="$PROJECT_DIR$/mybatisDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/springBatchPartition/pom.xml" />
+        <option value="$PROJECT_DIR$/springbatchdemo1/pom.xml" />
+        <option value="$PROJECT_DIR$/junitTestDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/springbatchdemobasic/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
