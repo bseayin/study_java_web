@@ -13,6 +13,8 @@ public class AppConfig {
         // create and configure beans
         ApplicationContext context = new ClassPathXmlApplicationContext("services.xml", "daos.xml");
         // retrieve configured instance
+        // @Resource
+        //PetStoreService petStore
         PetStoreService service = context.getBean("petStore", PetStoreService.class);
         // use configured instance
         List<String> userList = service.getUsernameList();

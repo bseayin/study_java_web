@@ -9,6 +9,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springbatchdemobasic" />
+        <module name="spring_annotation" />
         <module name="springbootEmbbededActiveMQ" />
         <module name="springbootbasic" />
         <module name="coreJava" />
@@ -36,6 +37,7 @@
       <module name="corejava-demo" target="1.5" />
       <module name="junitTestDemo" target="8" />
       <module name="mybatisDemo" target="1.5" />
+      <module name="spring_annotation" target="8" />
       <module name="springbatchdemo1" target="1.8" />
       <module name="springbatchdemobasic" target="8" />
       <module name="springBatchFileToDBDemo" target="1.8" />
@@ -59,6 +61,7 @@
       <module name="springBatchFileToDBDemo" options="-parameters" />
       <module name="springBatchPartition" options="-parameters" />
       <module name="springDemo" options="-parameters" />
+      <module name="spring_annotation" options="-parameters" />
       <module name="springbatchdemo1" options="-parameters" />
       <module name="springbatchdemobasic" options="-parameters" />
       <module name="springbatchhelloworld" options="-parameters" />

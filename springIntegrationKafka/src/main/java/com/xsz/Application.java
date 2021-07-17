@@ -63,7 +63,7 @@ public class Application {
     private void runDemo(ConfigurableApplicationContext context) {
         MessageChannel toKafka = context.getBean("toKafka", MessageChannel.class);
         System.out.println("Sending 10 messages...");
-        Map<String, Object> headers = Collections.singletonMap(KafkaHeaders.TOPIC, this.properties.getTopic());
+        Map<String, String> headers = Collections.singletonMap(KafkaHeaders.TOPIC, this.properties.getTopic());
         for (int i = 0; i < 10; i++) {
             toKafka.send(new GenericMessage<>("foo" + i, headers));
         }
@@ -80,7 +80,7 @@ public class Application {
         addAnotherListenerForTopics(this.properties.getNewTopic());
         headers = Collections.singletonMap(KafkaHeaders.TOPIC, this.properties.getNewTopic());
         for (int i = 0; i < 10; i++) {
-            toKafka.send(new GenericMessage<>("bar" + i, headers));
+            toKafka.send(new GenericMessage("bar" + i, headers));
         }
         received = fromKafka.receive(10000);
         count = 0;
@@ -94,7 +94,7 @@ public class Application {
     public ProducerFactory<?, ?> kafkaProducerFactory(KafkaProperties properties) {
         Map<String, Object> producerProperties = properties.buildProducerProperties();
         producerProperties.put(ProducerConfig.LINGER_MS_CONFIG, 1);
-        return new DefaultKafkaProducerFactory<>(producerProperties);
+        return new DefaultKafkaProducerFactory(producerProperties);
     }
 
     @ServiceActivator(inputChannel = "toKafka")
@@ -111,7 +111,7 @@ public class Application {
         Map<String, Object> consumerProperties = properties
                 .buildConsumerProperties();
         consumerProperties.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, 15000);
-        return new DefaultKafkaConsumerFactory<>(consumerProperties);
+        return new DefaultKafkaConsumerFactor<>(consumerProperties);
     }
 
     @Bean
@@ -125,7 +125,7 @@ public class Application {
     public KafkaMessageDrivenChannelAdapter<String, String>
     adapter(KafkaMessageListenerContainer<String, String> container) {
         KafkaMessageDrivenChannelAdapter<String, String> kafkaMessageDrivenChannelAdapter =
-                new KafkaMessageDrivenChannelAdapter<>(container);
+                new KafkaMessageDrivenChannelAdapter(container);
         kafkaMessageDrivenChannelAdapter.setOutputChannel(fromKafka());
         return kafkaMessageDrivenChannelAdapter;
     }

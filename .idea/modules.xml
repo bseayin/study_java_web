@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/springIntegrationJMS/springIntegrationJMS.iml" filepath="$PROJECT_DIR$/springIntegrationJMS/springIntegrationJMS.iml" />
       <module fileurl="file://$PROJECT_DIR$/springIntegrationJPA/springIntegrationJPA.iml" filepath="$PROJECT_DIR$/springIntegrationJPA/springIntegrationJPA.iml" />
       <module fileurl="file://$PROJECT_DIR$/springIntegrationKafka/springIntegrationKafka.iml" filepath="$PROJECT_DIR$/springIntegrationKafka/springIntegrationKafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_annotation/spring_annotation.iml" filepath="$PROJECT_DIR$/spring_annotation/spring_annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbatchdemo1/springbatchdemo1.iml" filepath="$PROJECT_DIR$/springbatchdemo1/springbatchdemo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbatchdemobasic/springbatchdemobasic.iml" filepath="$PROJECT_DIR$/springbatchdemobasic/springbatchdemobasic.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbatchhelloworld/springbatchhelloworld.iml" filepath="$PROJECT_DIR$/springbatchhelloworld/springbatchhelloworld.iml" />
