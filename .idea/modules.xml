@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/activiti5/activiti5.iml" filepath="$PROJECT_DIR$/activiti5/activiti5.iml" />
       <module fileurl="file://$PROJECT_DIR$/coreJava/coreJava.iml" filepath="$PROJECT_DIR$/coreJava/coreJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/corejava-demo/corejava-demo.iml" filepath="$PROJECT_DIR$/corejava-demo/corejava-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/junitTestDemo/junitTestDemo.iml" filepath="$PROJECT_DIR$/junitTestDemo/junitTestDemo.iml" />
@@ -18,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/springbatchdemobasic/springbatchdemobasic.iml" filepath="$PROJECT_DIR$/springbatchdemobasic/springbatchdemobasic.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbatchhelloworld/springbatchhelloworld.iml" filepath="$PROJECT_DIR$/springbatchhelloworld/springbatchhelloworld.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbatchstart/springbatchstart.iml" filepath="$PROJECT_DIR$/springbatchstart/springbatchstart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-activiti/springboot-activiti.iml" filepath="$PROJECT_DIR$/springboot-activiti/springboot-activiti.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootEmbbededActiveMQ/springbootEmbbededActiveMQ.iml" filepath="$PROJECT_DIR$/springbootEmbbededActiveMQ/springbootEmbbededActiveMQ.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" filepath="$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootbasic/springbootbasic.iml" filepath="$PROJECT_DIR$/springbootbasic/springbootbasic.iml" />
