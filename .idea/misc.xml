@@ -26,6 +26,7 @@
         <option value="$PROJECT_DIR$/spring_annotation/pom.xml" />
         <option value="$PROJECT_DIR$/activiti5/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-activiti/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-jdbctemplate/pom.xml" />
       </list>
     </option>
   </component>

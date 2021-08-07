@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/springbatchhelloworld/springbatchhelloworld.iml" filepath="$PROJECT_DIR$/springbatchhelloworld/springbatchhelloworld.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbatchstart/springbatchstart.iml" filepath="$PROJECT_DIR$/springbatchstart/springbatchstart.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-activiti/springboot-activiti.iml" filepath="$PROJECT_DIR$/springboot-activiti/springboot-activiti.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-jdbctemplate/springboot-jdbctemplate.iml" filepath="$PROJECT_DIR$/springboot-jdbctemplate/springboot-jdbctemplate.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootEmbbededActiveMQ/springbootEmbbededActiveMQ.iml" filepath="$PROJECT_DIR$/springbootEmbbededActiveMQ/springbootEmbbededActiveMQ.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" filepath="$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootbasic/springbootbasic.iml" filepath="$PROJECT_DIR$/springbootbasic/springbootbasic.iml" />

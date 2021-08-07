@@ -9,28 +9,29 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springbatchdemobasic" />
-        <module name="spring_annotation" />
-        <module name="springbootEmbbededActiveMQ" />
         <module name="springboot-activiti" />
         <module name="springbootbasic" />
         <module name="coreJava" />
-        <module name="activiti5" />
-        <module name="springbatchdemo1" />
-        <module name="springBatchPartition" />
         <module name="springbatchhelloworld" />
         <module name="springIntegrationJMS" />
         <module name="springbatchstart" />
+        <module name="springboot-jdbctemplate" />
+        <module name="springintegrationHttp" />
+        <module name="springIntegrationHelloWorld" />
+        <module name="springIntegrationJPA" />
+        <module name="corejava-demo" />
+        <module name="mybatisDemo" />
+        <module name="spring_annotation" />
+        <module name="springbootEmbbededActiveMQ" />
+        <module name="activiti5" />
+        <module name="springbatchdemo1" />
+        <module name="springBatchPartition" />
         <module name="springbootMybatis" />
         <module name="springboottest" />
         <module name="springBatchFileToDBDemo" />
-        <module name="springintegrationHttp" />
-        <module name="springIntegrationHelloWorld" />
         <module name="springDemo" />
         <module name="junitTestDemo" />
-        <module name="springIntegrationJPA" />
-        <module name="corejava-demo" />
         <module name="springintegrationHelloWord" />
-        <module name="mybatisDemo" />
         <module name="springIntegrationKafka" />
       </profile>
     </annotationProcessing>
@@ -48,6 +49,7 @@
       <module name="springBatchPartition" target="1.8" />
       <module name="springbatchstart" target="1.8" />
       <module name="springboot-activiti" target="1.8" />
+      <module name="springboot-jdbctemplate" target="8" />
       <module name="springbootbasic" target="1.8" />
       <module name="springbootEmbbededActiveMQ" target="1.8" />
       <module name="springbootMybatis" target="1.8" />
@@ -71,6 +73,7 @@
       <module name="springbatchdemobasic" options="-parameters" />
       <module name="springbatchhelloworld" options="-parameters" />
       <module name="springbatchstart" options="-parameters" />
+      <module name="springboot-jdbctemplate" options="-parameters" />
       <module name="springbootMybatis" options="-parameters" />
       <module name="springbootbasic" options="-parameters" />
       <module name="springboottest" options="-parameters" />
