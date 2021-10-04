@@ -26,6 +26,7 @@
         <module name="activiti5" />
         <module name="springbatchdemo1" />
         <module name="springBatchPartition" />
+        <module name="springbootredisrabbitmqseckill" />
         <module name="springbootMybatis" />
         <module name="springboottest" />
         <module name="springBatchFileToDBDemo" />
@@ -33,6 +34,7 @@
         <module name="junitTestDemo" />
         <module name="springintegrationHelloWord" />
         <module name="springIntegrationKafka" />
+        <module name="springbootredisrabbitmqseckill2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -53,6 +55,8 @@
       <module name="springbootbasic" target="1.8" />
       <module name="springbootEmbbededActiveMQ" target="1.8" />
       <module name="springbootMybatis" target="1.8" />
+      <module name="springbootredisrabbitmqseckill" target="8" />
+      <module name="springbootredisrabbitmqseckill2" target="8" />
       <module name="springboottest" target="1.8" />
       <module name="springDemo" target="1.8" />
       <module name="springIntegrationHelloWorld" target="1.5" />
@@ -76,6 +80,8 @@
       <module name="springboot-jdbctemplate" options="-parameters" />
       <module name="springbootMybatis" options="-parameters" />
       <module name="springbootbasic" options="-parameters" />
+      <module name="springbootredisrabbitmqseckill" options="-parameters" />
+      <module name="springbootredisrabbitmqseckill2" options="-parameters" />
       <module name="springboottest" options="-parameters" />
     </option>
   </component>

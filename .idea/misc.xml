@@ -27,6 +27,8 @@
         <option value="$PROJECT_DIR$/activiti5/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-activiti/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-jdbctemplate/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootredisrabbitmqseckill/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootredisrabbitmqseckill2/pom.xml" />
       </list>
     </option>
   </component>
