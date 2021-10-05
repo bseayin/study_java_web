@@ -71,7 +71,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="activiti5" options="-parameters" />
-      <module name="mybatisPlusGeneratorDemo" options="" />
+      <module name="mybatisPlusGeneratorDemo" options="-parameters" />
       <module name="springBatchFileToDBDemo" options="-parameters" />
       <module name="springBatchPartition" options="-parameters" />
       <module name="springDemo" options="-parameters" />
