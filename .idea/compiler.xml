@@ -28,6 +28,7 @@
         <module name="springBatchPartition" />
         <module name="springbootredisrabbitmqseckill" />
         <module name="springbootMybatis" />
+        <module name="mybatisPlusGeneratorDemo" />
         <module name="springboottest" />
         <module name="springBatchFileToDBDemo" />
         <module name="springDemo" />
@@ -43,6 +44,7 @@
       <module name="corejava-demo" target="1.5" />
       <module name="junitTestDemo" target="8" />
       <module name="mybatisDemo" target="1.5" />
+      <module name="mybatisPlusGeneratorDemo" target="8" />
       <module name="spring_annotation" target="8" />
       <module name="springbatchdemo1" target="1.8" />
       <module name="springbatchdemobasic" target="8" />
@@ -69,6 +71,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="activiti5" options="-parameters" />
+      <module name="mybatisPlusGeneratorDemo" options="" />
       <module name="springBatchFileToDBDemo" options="-parameters" />
       <module name="springBatchPartition" options="-parameters" />
       <module name="springDemo" options="-parameters" />

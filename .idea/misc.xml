@@ -29,6 +29,7 @@
         <option value="$PROJECT_DIR$/springboot-jdbctemplate/pom.xml" />
         <option value="$PROJECT_DIR$/springbootredisrabbitmqseckill/pom.xml" />
         <option value="$PROJECT_DIR$/springbootredisrabbitmqseckill2/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisPlusGeneratorDemo/pom.xml" />
       </list>
     </option>
   </component>
