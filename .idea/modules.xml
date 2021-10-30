@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/activiti5/activiti5.iml" filepath="$PROJECT_DIR$/activiti5/activiti5.iml" />
       <module fileurl="file://$PROJECT_DIR$/coreJava/coreJava.iml" filepath="$PROJECT_DIR$/coreJava/coreJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/corejava-demo/corejava-demo.iml" filepath="$PROJECT_DIR$/corejava-demo/corejava-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jedisClusterDemo/jedisClusterDemo.iml" filepath="$PROJECT_DIR$/jedisClusterDemo/jedisClusterDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jedisdemo/jedisdemo.iml" filepath="$PROJECT_DIR$/jedisdemo/jedisdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/junitTestDemo/junitTestDemo.iml" filepath="$PROJECT_DIR$/junitTestDemo/junitTestDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatisDemo/mybatisDemo.iml" filepath="$PROJECT_DIR$/mybatisDemo/mybatisDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatisPlusGeneratorDemo/mybatisPlusGeneratorDemo.iml" filepath="$PROJECT_DIR$/mybatisPlusGeneratorDemo/mybatisPlusGeneratorDemo.iml" />

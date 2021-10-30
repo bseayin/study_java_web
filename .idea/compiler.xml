@@ -21,6 +21,7 @@
         <module name="springIntegrationJPA" />
         <module name="corejava-demo" />
         <module name="mybatisDemo" />
+        <module name="jedisdemo" />
         <module name="spring_annotation" />
         <module name="springbootEmbbededActiveMQ" />
         <module name="activiti5" />
@@ -33,6 +34,7 @@
         <module name="springBatchFileToDBDemo" />
         <module name="springDemo" />
         <module name="junitTestDemo" />
+        <module name="jedisClusterDemo" />
         <module name="springintegrationHelloWord" />
         <module name="springIntegrationKafka" />
         <module name="springbootredisrabbitmqseckill2" />
@@ -42,6 +44,8 @@
       <module name="activiti5" target="8" />
       <module name="coreJava" target="8" />
       <module name="corejava-demo" target="1.5" />
+      <module name="jedisClusterDemo" target="8" />
+      <module name="jedisdemo" target="8" />
       <module name="junitTestDemo" target="8" />
       <module name="mybatisDemo" target="1.5" />
       <module name="mybatisPlusGeneratorDemo" target="8" />

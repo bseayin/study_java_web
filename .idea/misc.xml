@@ -30,6 +30,8 @@
         <option value="$PROJECT_DIR$/springbootredisrabbitmqseckill/pom.xml" />
         <option value="$PROJECT_DIR$/springbootredisrabbitmqseckill2/pom.xml" />
         <option value="$PROJECT_DIR$/mybatisPlusGeneratorDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/jedisdemo/pom.xml" />
+        <option value="$PROJECT_DIR$/jedisClusterDemo/pom.xml" />
       </list>
     </option>
   </component>
