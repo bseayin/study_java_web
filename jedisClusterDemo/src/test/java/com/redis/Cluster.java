@@ -1,16 +1,16 @@
 package com.redis;
 
-        import org.junit.Test;
-        import redis.clients.jedis.HostAndPort;
-        import redis.clients.jedis.JedisCluster;
-        import redis.clients.jedis.JedisPoolConfig;
-        import redis.clients.jedis.SortingParams;
+import org.junit.Test;
+import redis.clients.jedis.HostAndPort;
+import redis.clients.jedis.JedisCluster;
+import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.jedis.SortingParams;
 
-        import java.util.HashMap;
-        import java.util.HashSet;
-        import java.util.Map;
-        import java.util.Set;
-        import java.util.concurrent.TimeUnit;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 集群环境下Jedis操作
